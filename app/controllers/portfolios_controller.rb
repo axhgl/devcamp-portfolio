@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-	before_action :find_portfolio, only: [:show, :edit, :destroy]
+	before_action :find_portfolio, only: [:show, :edit, :update, :destroy]
 	layout 'portfolio'
 
 	def index
@@ -36,7 +36,6 @@ class PortfoliosController < ApplicationController
 	end
 
 	def update
-		
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
         format.html { redirect_to :portfolios, notice: 'Blog was successfully updated.' }
