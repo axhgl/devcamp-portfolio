@@ -58,4 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.0.0.beta3'
 gem 'jquery-rails'
 
-gem 'cpyright_view_tool', git: 'https://github.com/axhgl/cpyright_view_tool' 
+gem 'cpyright_view_tool', '~> 0.1.0'

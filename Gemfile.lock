@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/axhgl/cpyright_view_tool
-  revision: 1a3bde5b110f488480610dbd041fdf2dce12ab1d
-  specs:
-    cpyright_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +58,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    cpyright_view_tool (0.1.0)
     crass (1.0.3)
     devise (4.4.0)
       bcrypt (~> 3.0)
@@ -196,7 +191,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.beta3)
   byebug
   coffee-rails (~> 4.2)
-  cpyright_view_tool!
+  cpyright_view_tool (~> 0.1.0)
   devise (~> 4.4)
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
