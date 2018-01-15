@@ -2,10 +2,10 @@ class PortfoliosController < ApplicationController
 	before_action :find_portfolio_item, only: [:show, :edit, :update, :destroy]
 	layout 'portfolio'
     
-    access all: [:show, :index, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+    access all: [:show, :index, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, site_admin: :all
 
 	def index
-		@portfolio_items = Portfolio.all
+		@portfolio_items = Portfolio.by_position
 	end
 
 	def angular
@@ -50,11 +50,19 @@ class PortfoliosController < ApplicationController
 	end
 
 	def destroy
-    @portfolio_item.destroy
-    respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
-    end
+        @portfolio_item.destroy
+        respond_to do |format|
+          format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
+        end
 	end
+
+    def sort
+        params[:order].each do |key, value|
+            Portfolio.find(value[:id]).update(position: value[:position])
+        end
+
+        render nothing: true
+    end
 
 	private
 	
