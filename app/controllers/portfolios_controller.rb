@@ -50,11 +50,19 @@ class PortfoliosController < ApplicationController
 	end
 
 	def destroy
-    @portfolio_item.destroy
-    respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
-    end
+        @portfolio_item.destroy
+        respond_to do |format|
+          format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
+        end
 	end
+
+    def sort
+        params[:order].each do |key, value|
+            Portfolio.find(value[:id]).update(position: value[:position])
+        end
+
+        render nothing: true
+    end
 
 	private
 	
