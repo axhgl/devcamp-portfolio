@@ -22,3 +22,6 @@
 /config/secrets.yml
 .env
 /public
+
+# Ignore application configuration
+/config/application.yml

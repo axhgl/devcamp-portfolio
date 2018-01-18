@@ -77,3 +77,7 @@ gem 'dotenv', '~> 2.1', '>= 2.1.1'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 
 gem 'gritter', '~> 1.2'
+
+gem 'twitter', '~> 6.2'
+
+gem "figaro"
