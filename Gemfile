@@ -81,3 +81,5 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
 
 gem "figaro"
+
+gem 'redis', '~> 3.3', '>= 3.3.1'
