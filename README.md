@@ -12,8 +12,8 @@
 ### Code Example
 
 ``` ruby
-def my_greate_method
-	puts 'here it is'
+def my_greate_metho
+   puts 'here it is'
 end
 ```
 
